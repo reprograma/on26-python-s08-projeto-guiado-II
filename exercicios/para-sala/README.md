@@ -1,11 +1,10 @@
 # Exercício de Sala 🏫  
 
-## Nome do Exercicio
-
-- Explicação do exercício: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo nibh, tempus sed rhoncus et, ultrices vitae orci.
-Donec erat mauris, laoreet in tortor vel, eleifend suscipit nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Aliquam leo nibh, tempus sed rhoncus et, ultrices vitae orci. Donec erat mauris, laoreet in tortor vel, eleifend suscipit nibh. 
----
+## Sistema de gerenciamento de biblioteca
+Criar um sistema de gerenciamento de biblioteca usando TDD com as funcionalidades:
+- Adicionar livros
+- Listar livros
+- Emprestar livros
 
 Terminou o exercício? Dá uma olhada nessa checklist e confere se tá tudo certinho, combinado?!
 

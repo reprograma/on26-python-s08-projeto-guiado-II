@@ -2,79 +2,49 @@
   <img src="assets/reprograma-fundos-claros.png" alt="logo reprograma" width="500">
 </h1>
 
-# Tema da Aula
+# Projeto guiado #2
 
-Turma Online X | X-end | Semana X | 202X | Professora X
+Turma Online ON26 | back-end | Semana 08 | 2023 | Professora [Mayara Ferreira](https://github.com/mayaracsferreira)
+
+### Requisitos
+- Python3
+- Pip
+- Git
+- Visual Studio Code ou alguma outra IDE
 
 ### Instruções
 Antes de começar, vamos organizar nosso setup.
 * Fork esse repositório 
-* Clone o fork na sua máquina (Para isso basta abrir o seu terminal e digitar `git clone url-do-seu-repositorio-forkado`)
-* Entre na pasta do seu repositório (Para isso basta abrir o seu terminal e digitar `cd nome-do-seu-repositorio-forkado`)
-* [Add outras intrucoes caso necessario]
+* Clone o fork na sua máquina (Para isso basta abrir o seu terminal e digitar `git clone https://github.com/reprograma/on26-python-s08-projeto-guiado-II`)
+* Entre na pasta do seu repositório (Para isso basta abrir o seu terminal e digitar `cd on26-python-s08-projeto-guiado-II`)
 
 ### Resumo
 O que veremos na aula de hoje?
-* [Tema1](#tema1)
-* [Tema2](#tema2)
-* [Tema3](#tema3)
+* [Projeto Guiado II](#TDD)
 
 ## Conteúdo
-### Tema1 
-1. [Tópico 1](#topico1)
-2. [Tópico 2](#topico2)
-### Tema2 
-1. [Tópico 3](#topico3)
-   * [Subtópico 1](#subtopico1)
-   * [Subtópico 2](#subtopico2)
-   
-### Tema3
-1. [Tópico 4](#topico4)
+### Projeto Guiado II - TDD 
+Projeto guiado visando colocar em prática os conceitos vistos no módulo: Orientação a Objetos e Testes.
 
-### Tema1 
-
-#### Topico1
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo nibh, tempus sed rhoncus et, ultrices vitae orci. Donec erat mauris, laoreet in tortor vel, eleifend suscipit nibh. Mauris pharetra dui quis turpis rutrum blandit. Nunc tempor libero tortor, ac commodo erat porttitor ut. Donec vitae orci arcu. Nunc felis mi, maximus a turpis a, mollis pulvinar enim. Vivamus aliquam ante dui, a blandit massa rutrum et. Etiam hendrerit gravida ultrices. Nunc ante massa, dictum eget justo eget, feugiat tincidunt metus.
-
- #### Topico2
-  - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  - Donec erat mauris, laoreet in tortor vel
-  - Nunc ante massa, dictum eget justo eget, feugiat tincidunt.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo nibh, tempus sed rhoncus et, ultrices vitae orci. Donec erat mauris, laoreet in tortor vel, eleifend suscipit nibh. Mauris pharetra dui quis turpis rutrum blandit.
-
-### Tema2
-#### Topico3
-* [Subtópico 1](#subtopico1)
-* [Subtópico 2](#Subtopico2)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo nibh, tempus sed rhoncus et, ultrices vitae orci. Donec erat mauris, laoreet in tortor vel.
-
-##### Subtopico1
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo nibh, tempus sed rhoncus et, ultrices vitae orci. Donec erat mauris, laoreet in tortor vel.
-
-##### Subtopico2
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo nibh, tempus sed rhoncus et, ultrices vitae orci. Donec erat mauris, laoreet in tortor vel.
-
-### Tema3
-#### Topico4
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo nibh, tempus sed rhoncus et, ultrices vitae orci. Donec erat mauris, laoreet in tortor vel, eleifend suscipit nibh. Mauris pharetra dui quis turpis rutrum blandit. Nunc tempor libero tortor, ac commodo erat porttitor ut. Donec vitae orci arcu. Nunc felis mi, maximus a turpis a, mollis pulvinar enim. Vivamus aliquam ante dui, a blandit massa rutrum et. Etiam hendrerit gravida ultrices.
+Criar um sistema de gerenciamento de biblioteca usando TDD com as funcionalidades:
+- Adicionar livros
+- Listar livros
+- Emprestar livros
 
 ***
 ### Exercícios 
-* [Exercicio para sala](https://github.com/mflilian/repo-example/tree/main/exercicios/para-sala)
-* [Exercicio para casa](https://github.com/mflilian/repo-example/tree/main/exercicios/para-casa)
+* [Exercicio para sala](https://github.com/reprograma/on26-python-s08-projeto-guiado-II/tree/main/exercicios/para-sala)
+* [Exercicio para casa](https://github.com/reprograma/on26-python-s08-projeto-guiado-II/tree/main/exercicios/para-casa)
+
+#### Como criar meu Pull Request?
+[Instruções Pull Request](https://github.com/reprograma/on26-python-s08-projeto-guiado-II/blob/main/exercicios/para-casa/instrucoes-pull-request.md)
 
 ### Material da aula 
+- [Material de apoio](https://docs.google.com/presentation/d/1xn1iPDu5aDmG7-mEh9EotPsqHcNHsSpadulo1WazRzo/edit?usp=sharing)
 
 ### Links Úteis
-- [Lorem Ipsum](https://www.lipsum.com/feed/html)
-- [Lorem Ipsum](https://www.lipsum.com/feed/html)
-- [Lorem Ipsum](https://www.lipsum.com/feed/html)
-- [Lorem Ipsum](https://www.lipsum.com/feed/html)
-
+- [Referências](https://github.com/reprograma/on26-python-s08-projeto-guiado-II/blob/main/material/material.md)
 
 <p align="center">
 Desenvolvido com :purple_heart:  
 </p>
-
