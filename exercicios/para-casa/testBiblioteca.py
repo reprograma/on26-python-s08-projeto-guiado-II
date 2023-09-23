@@ -11,20 +11,20 @@ class TestBiblioteca(TestCase):
         # Assert
         self.assertIsInstance(biblioteca.livros, list)
     
+
     def test_adicionar_livro_deve_passar(self):
         # Arrange
         biblioteca = Biblioteca()
-        nome_livro = "O mito da bele"
-        autor_livro = "Naomi Wolf"
-        livro = Livro(nome_livro, autor_livro)
+        livro = Livro("livro", "autor")
 
         # Act
-        biblioteca.adicionar_livro(Livro)
+        biblioteca.adicionar_livro(livro)
 
         # Assert
         self.assertEqual(1, len(biblioteca.livros))
 
-    def test_adicionar_livro_nao_deve_inserir_numero():
+
+    def test_adicionar_livro_nao_deve_inserir_numero(self):
         # Arrange
         biblioteca = Biblioteca()
         livro = 1988
