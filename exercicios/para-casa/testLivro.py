@@ -13,6 +13,7 @@ class TestLivro(TestCase):
         # Assert
         self.assertEqual(nome, livro.nome)
         self.assertEqual(autor, livro.autor)
+        self.assertEqual(False, livro.esta_emprestado)
 
-        
+
 
