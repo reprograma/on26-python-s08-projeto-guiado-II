@@ -16,6 +16,7 @@ Turma Online ON26 | back-end | Semana 08 | 2023 | Professora [Mayara Ferreira](h
 Antes de começar, vamos organizar nosso setup.
 * Fork esse repositório 
 * Clone o fork na sua máquina (Para isso basta abrir o seu terminal e digitar `git clone https://github.com/reprograma/on26-python-s08-projeto-guiado-II`)
+* Git clone do repositorio que foi feito fork
 * Entre na pasta do seu repositório (Para isso basta abrir o seu terminal e digitar `cd on26-python-s08-projeto-guiado-II`)
 
 ### Resumo
