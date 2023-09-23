@@ -41,7 +41,7 @@ Criar um sistema de gerenciamento de biblioteca usando TDD com as funcionalidade
 [Instruções Pull Request](https://github.com/reprograma/on26-python-s08-projeto-guiado-II/blob/main/exercicios/para-casa/instrucoes-pull-request.md)
 
 ### Material da aula 
-- [Material de apoio](https://docs.google.com/presentation/d/1xn1iPDu5aDmG7-mEh9EotPsqHcNHsSpadulo1WazRzo/edit?usp=sharing)
+- [Pasta de material de apoio](https://github.com/reprograma/on26-python-s08-projeto-guiado-II/tree/main/material)
 
 ### Links Úteis
 - [Referências](https://github.com/reprograma/on26-python-s08-projeto-guiado-II/blob/main/material/material.md)
