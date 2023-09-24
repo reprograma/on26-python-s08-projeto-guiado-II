@@ -8,6 +8,10 @@ Critérios de aceitação:
 - Caso o livro não seja encontrado o método não deve dar erro ou exceções
 - Apenas livros não emprestados podem ser removidos (opcional)
 
+
+add metodos (exibir_livros e emprestar_livro)
+
+
 ## Criar método search_book 
 Critérios de aceitação:
 - O método deve ter ao menos 1 (um) teste associado
