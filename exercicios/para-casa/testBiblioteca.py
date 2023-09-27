@@ -132,9 +132,8 @@ class TestBiblioteca(TestCase):# teste case identifica que esse é o teste
     # Verifique se a segunda mensagem de erro está correta
     self.assertEqual("Livro não encontrado na biblioteca", str(ValueError("Livro não encontrado na biblioteca")))
    
-
-
-
+   
+   
    def test_remover_livro_inexistente_deve_falhar(self):
         # Tente remover um livro que não está na biblioteca
         with self.assertRaises(ValueError):
