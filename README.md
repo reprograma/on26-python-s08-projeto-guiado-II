@@ -1,50 +1,33 @@
-<h1 align="center">
-  <img src="assets/reprograma-fundos-claros.png" alt="logo reprograma" width="500">
-</h1>
+# Exercício de Casa 🏠 
 
-# Projeto guiado #2
+## Criar método remove_book 
+Critérios de aceitação:
+- O método deve ter ao menos 1 (um) teste associado
+- O método deve receber como parâmetro o nome do livro e remover da propriedade Books
+- O método deve remover apenas 1 (um) livro por vez
+- Caso o livro não seja encontrado o método não deve dar erro ou exceções
+- Apenas livros não emprestados podem ser removidos (opcional)
 
-Turma Online ON26 | back-end | Semana 08 | 2023 | Professora [Mayara Ferreira](https://github.com/mayaracsferreira)
+## Criar método search_book 
+Critérios de aceitação:
+- O método deve ter ao menos 1 (um) teste associado
+- O método deve receber como parâmetro o nome do livro a ser buscado e retornar o nome do livro, autor e informação se livro está disponível ou emprestado
+- Caso o livro não seja encontrado o método deve retornar a mensagem "Livro não encontrado"
 
-### Requisitos
-- Python3
-- Pip
-- Git
-- Visual Studio Code ou alguma outra IDE
+## Criar método return_book 
+Critérios de aceitação:
+- O método deve ter ao menos 1 (um) teste associado
+- O método deve receber como parâmetro o nome do livro a ser devolvido e mudar o status do livro para não emprestado na propriedade Books
+- Caso o livro não seja encontrado o método deve apenas exibir a mensagem "Livro não encontrado"
 
-### Instruções
-Antes de começar, vamos organizar nosso setup.
-* Fork esse repositório 
-* Clone o fork na sua máquina (Para isso basta abrir o seu terminal e digitar `git clone https://github.com/reprograma/on26-python-s08-projeto-guiado-II`)
-* Entre na pasta do seu repositório (Para isso basta abrir o seu terminal e digitar `cd on26-python-s08-projeto-guiado-II`)
+---
 
-### Resumo
-O que veremos na aula de hoje?
-* [Projeto Guiado II](#TDD)
+Terminou o exercício? Dá uma olhada nessa checklist e confere se tá tudo certinho, combinado?!
 
-## Conteúdo
-### Projeto Guiado II - TDD 
-Projeto guiado visando colocar em prática os conceitos vistos no módulo: Orientação a Objetos e Testes.
-
-Criar um sistema de gerenciamento de biblioteca usando TDD com as funcionalidades:
-- Adicionar livros
-- Listar livros
-- Emprestar livros
-
-***
-### Exercícios 
-* [Exercicio para sala](https://github.com/reprograma/on26-python-s08-projeto-guiado-II/tree/main/exercicios/para-sala)
-* [Exercicio para casa](https://github.com/reprograma/on26-python-s08-projeto-guiado-II/tree/main/exercicios/para-casa)
-
-#### Como criar meu Pull Request?
-[Instruções Pull Request](https://github.com/reprograma/on26-python-s08-projeto-guiado-II/blob/main/exercicios/para-casa/instrucoes-pull-request.md)
-
-### Material da aula 
-- [Material de apoio](https://docs.google.com/presentation/d/1xn1iPDu5aDmG7-mEh9EotPsqHcNHsSpadulo1WazRzo/edit?usp=sharing)
-
-### Links Úteis
-- [Referências](https://github.com/reprograma/on26-python-s08-projeto-guiado-II/blob/main/material/material.md)
-
-<p align="center">
-Desenvolvido com :purple_heart:  
-</p>
+- [ ] Fiz o fork do repositório.
+- [ ] Clonei o fork na minha máquina (`git clone url-do-meu-fork`).
+- [ ] Resolvi o exercício.
+- [ ] Adicionei as mudanças. (`git add .` para adicionar todos os arquivos, ou `git add nome_do_arquivo` para adicionar um arquivo específico)
+- [ ] Commitei a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
+- [ ] Pushei os commits na minha branch (`git push origin nome-da-branch`)
+- [ ] Criei um Pull Request seguindo as orientaçoes que estao nesse [documento](https://github.com/reprograma/on26-python-s08-projeto-guiado-II/blob/main/exercicios/para-casa/instrucoes-pull-request.md).
