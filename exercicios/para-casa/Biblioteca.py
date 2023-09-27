@@ -23,6 +23,7 @@ class Biblioteca:
         for livro in self.livros:
             if livro.nome == nome:
                 self.livros.remove(livro)
+                break
             
                 
         
