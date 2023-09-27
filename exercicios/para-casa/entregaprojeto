@@ -1,0 +1,14 @@
+
+
+class ExibirLivros:
+    def _init_(self, Biblioteca):
+        self.Biblioteca = Biblioteca
+
+    def listar_livros(self):
+        livros = self.Biblioteca.exibir_livros()
+        if not livros:
+            raise ValueError("A biblioteca está vazia. Não há livros para exibir.")
+        
+        for livro in livros:
+            print(livro)
+
