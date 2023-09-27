@@ -26,7 +26,7 @@ class TestBiblioteca(TestCase):# teste case identifica que esse é o teste
        
         # teste Metodo Adicionar Livros
 
-   def test_adicinar_livro_deve_passar(self):
+   def test_adicionar_livro_deve_passar(self):
         #criar o instancia(cria) objeto na classe Livro
 
         # Assert
@@ -42,6 +42,8 @@ class TestBiblioteca(TestCase):# teste case identifica que esse é o teste
         # Teste Metodo Exibir Livros
     
    def test_exibir_livros_deve_passar(self):
+
+
        
         # Criar um objeto io.StringIO para capturar a saída
         output = io.StringIO()
@@ -76,6 +78,7 @@ class TestBiblioteca(TestCase):# teste case identifica que esse é o teste
    def test_emprestar_livro_ja_emprestado_deve_falhar(self):
         # Adicione o livro à biblioteca
 
+
         # Empréstimo bem-sucedido
         self.biblioteca.emprestar_livro(self.nome_livro1)
 
@@ -91,28 +94,46 @@ class TestBiblioteca(TestCase):# teste case identifica que esse é o teste
             
             
            # Teste Metodo Remover Livros
+   
+   
+
 
    def test_remover_livro_deve_passar(self):
-        # Adicione o livro à biblioteca
+    # Adicione o livro à biblioteca
+    self.assertEqual(2, len(self.biblioteca.livros))
 
-        # Remoção bem-sucedido
-        self.biblioteca.remover_livro(self.nome_livro2)
-
-        # Verifique se o atributo removido do livro foi marcado como True
-        self.assertTrue(self.livro2.esta_removido)  
-       
+    # Remoção bem-sucedida
+    self.biblioteca.remover_livro(self.nome_livro2)
     
+    # Verifique se o livro foi removido da lista
+    self.assertNotIn(self.livro2, self.biblioteca.livros)
+
+    # Verifique se o atributo esta_removido do livro foi marcado como True
+    self.assertTrue(self.livro2.esta_removido)
+
     
    def test_remover_livro_ja_removido_deve_falhar(self):
-        # Adicione o livro à biblioteca
+    # Adicione o livro à biblioteca
 
-        # Remoção  bem-sucedido
+    # Remoção bem-sucedida
+    self.biblioteca.remover_livro(self.nome_livro2)
+
+    # Tente remover o mesmo livro novamente (já removido)
+    with self.assertRaises(ValueError):
+        self.biblioteca.remover_livro(self.nome_livro2)
+    
+    # Verifique se a primeira mensagem de erro está correta
+    self.assertEqual("Livro já foi removido. Selecione outro exemplar", str(ValueError("Livro já foi removido. Selecione outro exemplar")))
+    
+    # Agora, tente remover o mesmo livro novamente (que não deveria estar mais na biblioteca)
+    with self.assertRaises(ValueError):
         self.biblioteca.remover_livro(self.nome_livro2)
 
-        # Tente remover o mesmo livro novamente (já removido)
-        with self.assertRaises(ValueError):
-            self.biblioteca.remover_livro(self.nome_livro2)
-            
+    # Verifique se a segunda mensagem de erro está correta
+    self.assertEqual("Livro não encontrado na biblioteca", str(ValueError("Livro não encontrado na biblioteca")))
+   
+
+
 
    def test_remover_livro_inexistente_deve_falhar(self):
         # Tente remover um livro que não está na biblioteca

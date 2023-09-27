@@ -32,17 +32,16 @@ class Biblioteca:
                 
                 #Metodo Remover
     def remover_livro(self, nome_livro):
-        for livro in self.livros:
-            if livro.nome == nome_livro:
-                if  livro.esta_removido:
-                   raise ValueError("Livro já foi  removido. selecione outro exemplar")
-    
-                livro.esta_removido = True
-                return f"Nome: {livro.nome}, Autor: {livro.autor}, Emprestado: {livro.esta_emprestado}"
-                
-               
-        raise ValueError("Livro não encontrado na biblioteca")
-    
+     for livro in self.livros:
+        if livro.nome == nome_livro:
+            if livro.esta_removido:
+                raise ValueError("Livro já foi removido. Selecione outro exemplar")
+            self.livros.remove(livro)
+            livro.esta_removido = True  # Defina esta flag como True após a remoção
+            return f"Nome: {livro.nome}, Autor: {livro.autor}, Removido: {livro.esta_removido}"
+             
+     raise ValueError("Livro não encontrado na biblioteca")
+
     
                 #Metodo Buscar
     def buscar_livro(self, nome_livro):
@@ -51,7 +50,7 @@ class Biblioteca:
                 if livro.encontrado:
                     raise ValueError("Livro já foi encontrado. Não é possível encontrá-lo novamente.")
                 livro.encontrado = True
-                return f"Nome: {livro.nome}, Autor: {livro.autor}, Emprestado: {livro.esta_emprestado}"
+                return f"Nome: {livro.nome}, Autor: {livro.autor}, Emprestado: {livro.esta_removido}"
         raise ValueError("Livro não encontrado na biblioteca")
     
                
