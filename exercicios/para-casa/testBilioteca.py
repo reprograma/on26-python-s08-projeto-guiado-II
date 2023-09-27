@@ -91,16 +91,7 @@ class TestBiblioteca(TestCase):
 
 
 
-        def test_buscar_livros_deve_passar(self):
-          
-          nome_livro = "Afropessimismo"
-          autor_livro = "Frank B. Wilderson III"
-                                  
-          titulo = Livro(nome_livro, autor_livro)              
-          self.biblioteca.adicionar_livro(titulo)
-          
-          titulo = Livro("Casei com um comunista", "Philip Roth")
-          self.biblioteca.adicionar_livro(titulo)
+       
 
           
 
