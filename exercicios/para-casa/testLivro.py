@@ -2,6 +2,9 @@ from unittest import TestCase
 from Livro import Livro
 
 class TestLivro(TestCase):
+  def setUp(self):
+      self.livro = Livro(nome, autor)
+
   def test_init_deve_passar(self):
         # Arrange
         nome = "Calibã e a bruxa"
