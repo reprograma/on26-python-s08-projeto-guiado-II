@@ -1,7 +1,8 @@
 class Livro:
-    def __init__(self, nome, autor):
+    def __init__(self, nome, autor, emprestado = False, disponivel = True):
         self.nome = nome
         self.autor = autor
-        self.estaEmprestado = False
-        
+        self.emprestado = False
+        self.disponivel = True
     
+

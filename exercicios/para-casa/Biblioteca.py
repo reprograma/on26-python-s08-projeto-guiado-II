@@ -13,12 +13,10 @@ class Biblioteca:
             return self.livros
 
     def emprestar_livro(self, livro: Livro):
-        lista_livros = self.livros
-        if livro.nome not in lista_livros:   
-            print(f'Este livro não existe em nossa lista.')
+        if livro.emprestado == True:
+            return(f'O livro não está disponível')
+        elif livro.emprestado:
+            return(f'Este livro está disponível.')
         else:
-            if livro.estaEmprestado == True:
-                print(f'{livro.nome} já está emprestado.')
-            else:
-                print(f'{livro} está disponível. Obrigada por utilizar nossos serviços!')
-                livro.estaEmprestado = True    
+             raise TypeError ('Não temos este livro')
+    
