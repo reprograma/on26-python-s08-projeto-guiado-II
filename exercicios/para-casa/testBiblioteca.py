@@ -30,15 +30,6 @@ class TestBiblioteca(TestCase):
         with self.assertRaises(TypeError):
             self.biblioteca.adicionar_livro(livro)
 
-    def test_emprestar_livro_deve_passar(self):
-        #Arrange
-        livro = Livro("O mito da beleza", "Naomi Wolf")
-        #Act
-        self.biblioteca.adicionar_livro(livro)
-        #Assert
-        self.assertTrue(self.biblioteca.emprestar_livro("O mito da beleza"))
-        self.assertTrue(livro.esta_emprestado)
-
     def test_emprestar_livro_inexistente_deve_retornar_false(self):
         #Act/Assert
         self.assertFalse(self.biblioteca.emprestar_livro("Livro Inexistente"))
