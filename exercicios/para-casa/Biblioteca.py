@@ -10,7 +10,14 @@ class Biblioteca :
             raise TypeError(f"Esoerado Livro obtido valor {livro} do tipo {type(livro)}")
 
         self.livros.append(livro)
-
+        
+    #exibir livro
+    def exibir_livros(self):
+        lista_livros = []
+        for livro in self.livros:
+            lista_livros.append(f'{livro.nome} por {livro.autor}')
+            return lista_livros
+            
     #Removendo o livro
     def remover_livro(self, nome_livro):
         livro_removido = False
