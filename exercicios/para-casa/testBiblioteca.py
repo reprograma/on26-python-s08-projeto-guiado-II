@@ -38,6 +38,18 @@ class TestBiblioteca(TestCase):
         #act/assert
         with self.assertRaises(TypeError):
             biblioteca.adicionar_livro(livro)
+
+    def test_exibir_livros_listados_deve_passar(self):
+
+        #Arrange
+        biblioteca = Biblioteca()
+        #Act
+        livro1 = Livro("Dom Casmurro", "Machado de Assis")
+        biblioteca.adicionar_livro(livro1)
+        lista_de_livros = biblioteca.exibir_livros()
+
+        #Assert
+        self.assertIn("Dom Casmurro por Machado de Assis", lista_de_livros)
     
     def test_remover_livro_deve_passar(self):
         #Arrange
