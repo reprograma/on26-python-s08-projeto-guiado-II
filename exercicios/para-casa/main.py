@@ -9,6 +9,3 @@ biblioteca_objeto = Biblioteca()
 print(biblioteca_objeto.livros)
 
 biblioteca_objeto.adicionar_livro(livro_objeto)
-
-for livro in biblioteca_objeto.livros:
-  print(livro.nome)

@@ -1,9 +1,10 @@
 from unittest import TestCase
+from Biblioteca import Biblioteca
 from Livro import Livro
 
 class TestLivro(TestCase):
   def setUp(self):
-      self.livro = Livro(nome, autor)
+      self.biblioteca = Biblioteca()
 
   def test_init_deve_passar(self):
         # Arrange
@@ -15,14 +16,17 @@ class TestLivro(TestCase):
         self.assertEqual(nome, livro.nome)
         self.assertEqual(autor, livro.autor)
         self.assertEqual(False, livro.esta_emprestado)
-      
-  def teste_livro_emprestado(self):
+  
+  def test_emprestar_livro_deve_marcar_como_emprestado(self):
       # Arrange
-      nome = "Aura"
-      autor = "Carlos Fuentes"
-      # Act
-      livro = Livro(nome, autor)
+      nome_livro = "Aura"
+      autor_livro = "Carlos Fuentes"
+      livro = Livro(nome_livro, autor_livro)
+      self.biblioteca.adicionar_livro(livro) #Add livro à lista
+
+       # Act
+      emprestado = self.biblioteca.emprestar_livro(nome_livro)
+
       # Assert
-      self.assertEqual(nome, livro.nome)
-      self.assertEqual(autor, livro.autor)
-      self.assertEqual(False, livro.esta_emprestado)
+      self.assertTrue(emprestado)  # Verifica se o empréstimo funcionou e se o livro está marcado como emprestado
+      self.assertTrue(livro.esta_emprestado)

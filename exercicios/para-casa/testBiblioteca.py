@@ -43,14 +43,13 @@ class TestBiblioteca(TestCase):
         #Act/Assert
         self.assertFalse(self.biblioteca.emprestar_livro("Livro Inexistente"))
 
-    def teste_exibir_livros(self):
-        #Arrange
-        livro1 = Livro("Uzumaki", "Junji Ito")
-        livro2 = Livro("Tomie", "Junji Ito")
-        #Act
-        self.biblioteca.adicionar_livro(livro1)
-        self.biblioteca.adicionar_livro(livro2)
-        livros = self.biblioteca.exibir_livros()
-        #Assert
-        self.assertIn(livro1, livros)
-        self.assertIn(livro2, livros)
+    def test_exibir_livros_deve_retornar_lista_de_nomes(self):
+            # Arrange
+            livro1 = Livro("Uzumaki", "Junji Ito")
+            livro2 = Livro("Tomie", "Junji Ito")
+            self.biblioteca.adicionar_livro(livro1)
+            self.biblioteca.adicionar_livro(livro2)
+            # Act
+            lista_de_nomes = self.biblioteca.exibir_livros()
+            # Assert
+            self.assertEqual(["Uzumaki", "Tomie"], [livro.nome for livro in lista_de_nomes]) #Verifica se ambos os valores são iguais, se forem o teste passará
