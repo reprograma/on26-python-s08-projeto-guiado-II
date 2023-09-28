@@ -19,13 +19,13 @@ class TestLivro(TestCase):
   
   def test_emprestar_livro_deve_marcar_como_emprestado(self):
       # Arrange
-      nome_livro = "Aura"
-      autor_livro = "Carlos Fuentes"
-      livro = Livro(nome_livro, autor_livro)
+      nome_do_livro = "Aura"
+      autor_do_livro = "Carlos Fuentes"
+      livro = Livro(nome_do_livro, autor_do_livro)
       self.biblioteca.adicionar_livro(livro) #Add livro à lista
 
        # Act
-      emprestado = self.biblioteca.emprestar_livro(nome_livro)
+      emprestado = self.biblioteca.emprestar_livro(nome_do_livro)
 
       # Assert
       self.assertTrue(emprestado)  # Verifica se o empréstimo funcionou e se o livro está marcado como emprestado
