@@ -36,14 +36,8 @@ class TestBiblioteca(TestCase):
         with self.assertRaises(TypeError):
             biblioteca.adicionar_livro(livro)
         
-        def test_exibirlivros(self):
+    def test_exibir_livros(self.biblioteca):
         #Arrange
-            biblioteca.livros = ['O Método Fair Play']
-            lista = self.biblioteca.livros
-
+        lista = Biblioteca()
         #Act
-            self.biblioteca.exibir_livros()
-
-        #Assert
-            self.assertEqual(lista,['O Método Fair Play'])
-
+        return lista

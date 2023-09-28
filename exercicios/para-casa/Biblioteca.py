@@ -10,7 +10,7 @@ class Biblioteca:
         self.livros.append(livro)
 
     def exibir_livros(self):
-            return self.livros
+        return self.livros
 
     def emprestar_livro(self, livro: Livro):
         if livro.emprestado == True:
