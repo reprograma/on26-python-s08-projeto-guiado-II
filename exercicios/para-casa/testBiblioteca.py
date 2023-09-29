@@ -7,7 +7,7 @@ class testBiblioteca(TestCase):
     def setUp(self):
         self.biblioteca = Biblioteca()
     
-    def test_init_deve_passar(self):
+    def teste_init_deve_passar(self):
         
         #Arrange/Act
         #biblioteca = Biblioteca()
@@ -15,7 +15,7 @@ class testBiblioteca(TestCase):
         #Assert
         self.assertIsInstance(self.biblioteca.livros, list)
 
-    def test_adicionar_livros_deve_passar(self):
+    def teste_adicionar_livros_deve_passar(self):
         
         #Arrange
         #biblioteca = Biblioteca()
@@ -43,52 +43,142 @@ class testBiblioteca(TestCase):
         with self.assertRaises(TypeError):
             self.biblioteca.adicionar_livro(livro)
 
-    def test_exibir_livros_deve_passar(self):
+    def teste_exibir_livros_deve_passar(self):
 
         #Arrange
         self.biblioteca.livros = ['Blabla']
-        lista = self.biblioteca.livros
 
         #Act
         self.biblioteca.exibir_livros()
         
         #Assert
-        self.assertEqual(lista,['Blabla'])
+        self.assertEqual(self.biblioteca.livros,['Blabla'])
 
-    def test_emprestar_livro_naLista_deve_passar(self):
+    def test_emprestar_livro_existente_deve_passar(self):
         
         #Arrange
         nome = 'O mito da beleza'
         autor = 'Igea Martins'
         livro = Livro(nome, autor)
-        self.biblioteca.livros = ['O mito da beleza', 'Eram os deuses astronautas', 'Tarântula']
-        lista_livros = self.biblioteca.livros
+        self.biblioteca.livros = [livro]
 
         #Act
         self.biblioteca.emprestar_livro(livro)
 
         #Assert
-        self.assertTrue(livro.nome in lista_livros)
+        self.assertTrue(livro.isBorrowed)
 
-    def test_emprestar_livro_inexistente_deve_passar(self):
+    def teste_emprestar_livro_inexistente_deve_passar(self):
 
         #Arrange
         nome = 'Pururuca'
         autor = 'Igea Martins'
         livro = Livro(nome, autor)
-        self.biblioteca.livros = ['O mito da beleza', 'Eram os deuses astronautas', 'Tarântula']
-        lista_livros = self.biblioteca.livros
+
+        #Act/#Assert
+        with self.assertRaises(NameError):
+            self.biblioteca.emprestar_livro(livro)
+        
+    def teste_emprestar_livro_emprestado_deve_passar(self):
+
+        #Arrange
+        nome = 'O mito da beleza'
+        autor = 'Igea Martins'
+        livro = Livro(nome, autor)
+        livro.isBorrowed = True
+        self.biblioteca.livros = [livro]
 
         #Act
         self.biblioteca.emprestar_livro(livro)
 
         #Assert
-        self.assertTrue(livro.nome not in lista_livros)
+        self.assertTrue(livro.isBorrowed)
 
-    #def test_emprestar_livro_nDisponivel_deve_passar(self):
+    def teste_remover_livro_na_lista_deve_passar(self):
+        #Arrange
+        nome = 'Pururuca'
+        autor = 'Igea Martins'
+        livro = Livro(nome, autor)
+        self.biblioteca.livros = [livro]
+        
+        #Act
+        self.biblioteca.remover_livro(livro)
+
+        self.assertFalse(livro in self.biblioteca.livros)
+
+    def teste_remover_livro_inexistente_deve_passar(self):
+        #Arrange
+        nome = 'Pururuca'
+        autor = 'Igea Martins'
+        livro = Livro(nome, autor)
+        
+        #Act/#Assert
+        with self.assertRaises(ValueError):
+            self.biblioteca.remover_livro(livro)
+
+    def teste_remover_livro_emprestado_deve_passar(self):
+        #Arrange
+        nome = 'Pururuca'
+        autor = 'Igea Martins'
+        livro = Livro(nome, autor)
+        livro.isBorrowed = True
+        self.biblioteca.livros = [livro]
+
+        #Assert/#Act
+        self.assertEqual(f'{livro.nome} está emprestado e portando não pode ser removido.', self.biblioteca.remover_livro(livro))
+
+    def teste_devolver_livro_inexistenteNaLista_deve_passar(self):
 
         #Arrange
+        nome = 'Pururuca'
+        autor = 'Igea Martins'
+        livro = Livro(nome, autor)
+        
+        #Act/#Arrange
+        with self.assertRaises(ValueError):
+            self.biblioteca.devolver_livro(livro)
 
+    def teste_devolver_livro_devolvido_deve_passar(self):
+        #Arrange
+        nome = 'Pururuca'
+        autor = 'Igea Martins'
+        livro = Livro(nome, autor)
+        self.biblioteca.livros = [livro]
+
+        #Assert/#Act
+        self.assertFalse(self.biblioteca.devolver_livro(livro))
+
+    def teste_devolver_livro_disponível_deve_passar(self):
+        
+        #Assert
+        nome = 'Pururuca'
+        autor = 'Igea Martins'
+        livro = Livro(nome, autor)
+        livro.isBorrowed = True
+        self.biblioteca.livros = [livro]
+        
         #Act
+        self.biblioteca.devolver_livro(livro)
 
         #Assert
+        self.assertFalse(self.biblioteca.devolver_livro(livro))
+
+    def teste_buscar_livro_inexistente_na_lista_deve_passar(self):
+        #Arrange
+        nome = 'Pururuca'
+        autor = 'Igea Martins'
+        livro = Livro(nome, autor)
+
+        #Assert/#Act
+        with self.assertRaises(ValueError):
+            self.biblioteca.buscar_livro(livro)
+
+    def teste_buscar_livro_emprestado_deve_passar(self):
+        nome = 'Pururuca'
+        autor = 'Igea Martins'
+        livro = Livro(nome, autor)
+        livro.isBorrowed = True
+        self.biblioteca.livros = [livro]
+
+        #Assert/#Act
+        self.assertEqual(f'{livro.nome}, de {livro.autor}, está emprestado.', self.biblioteca.buscar_livro(livro))
